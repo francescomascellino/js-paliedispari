@@ -98,6 +98,12 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 
 //iniziare a leggere la stringa dal suo valore massimo di lunghezza  e sottrarre man mano all'indice fino ad arrivare a 0 e aggiungere a una nuova variabile i vari valori dell'indice per ottenere la stringa al contrario.
 
+const wordToCheckInpt = document.getElementById("wordToCheckInpt");
+const wordCheckBtn = document.getElementById("wordCheckBtn");
+const palindromeResult = document.getElementById("palindromeResult");
+
+let word = "";
+
 function reverse(wordToCheck) {
 
     let reverseWord = "";
@@ -114,13 +120,35 @@ function reverse(wordToCheck) {
 
 }
 
-let word = "anna"
-let reverseResult = reverse(word);
-console.log(reverseResult);
+function palindromeCheck(word1, reverseWord1) {
 
-if (word == reverseResult) {
-    console.log("palindromo");
+    if (word1 == reverseWord1) {
+
+        console.log("Il testo inserito è un palindromo");
+        palindromeResult.innerHTML = "Typed text is a palindrome"
+
+    } else {
+
+        console.log("Il testo inserito non è un palindromo");
+        palindromeResult.innerHTML = "Typed text is not a palindrome"
+
+    }
+
 }
+
+wordCheckBtn.addEventListener("click", function () {
+
+    let word = wordToCheckInpt.value;
+
+    let reverseResult = reverse(word);
+
+    palindromeCheck(word, reverseResult);
+
+})
+
+
+
+
 
 /* WITH ARRAY AND reverse()
 
