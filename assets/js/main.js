@@ -97,3 +97,24 @@ evenOddForm.addEventListener("submit", function (e) {
 Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma */
 
 //iniziare a leggere la stringa dal suo valore massimo di lunghezza  e sottrarre man mano all'indice fino ad arrivare a 0 e aggiungere a una nuova variabile i vari valori dell'indice per ottenere la stringa al contrario.
+
+let word = "casa";
+let reverseWord;
+
+for (let i = word.length - 1; i >= 0; i--) {
+
+    console.log(word[i]);
+    reverseWord += word[i]
+
+}
+
+console.log(reverseWord);
+
+let wordToArray = word.split("")
+console.log("word to array =", wordToArray);
+
+let wordToArrayReverse = wordToArray.reverse()
+console.log("reverse word to array =", wordToArrayReverse);
+
+let newWord = wordToArrayReverse.join("")
+console.log("new word =", newWord);
