@@ -140,7 +140,7 @@ function reverse(userImput) {
 
 function palindromeCheck(word1, reverseWord1) {
 
-    if (word1 == reverseWord1) {
+    if (word1.toLowerCase() == reverseWord1.toLowerCase()) {
 
         console.log("Il testo inserito è un palindromo");
         palindromeResult.innerHTML = "Typed text is a palindrome"
