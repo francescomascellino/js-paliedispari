@@ -21,7 +21,7 @@ function getRandomNumber(min, max) {
 function sumEvenOdd(value1, value2) {
 
     if ((value1 + value2) % 2 === 0) {
-        console.log("Value 1=", value1, " - Value 2 =", value2, " - Somma dei valori =", value1 + value2);
+        console.log("Value 1=", value1, "- Value 2 =", value2, "- Somma dei valori =", value1 + value2);
         return true
     }
 
@@ -36,30 +36,30 @@ evenOddForm.addEventListener("submit", function (e) {
 
     //Reads the user choice (even/odd)
     const userChoice = evenOddChoice.value;
-    console.log("scelta utente =", userChoice);
+    console.log("Scelta utente =", userChoice);
 
     //Generates a randomnumber from 1 to 5
     const randomNum = getRandomNumber(1, 5);
-    console.log("Numero Random =", randomNum);
+    console.log("Numero random =", randomNum);
 
     //Reads the number choosen by user
     const userNum = Number(userNumberValue.value);
-    console.log("Numero Utente =", userNum);
+    console.log("Numero utente =", userNum);
 
     //If the sum of the values is even (true)
     if (sumEvenOdd(randomNum, userNum)) {
 
-        console.log("sum even odd =", sumEvenOdd(randomNum, userNum));
+        console.log("risultato di sumEvenOdd =", sumEvenOdd(randomNum, userNum));
 
         //and user choice is "even", user wins"
         switch (userChoice) {
             case "even":
-                console.log("User wins", userChoice, sumEvenOdd(randomNum, userNum));
+                console.log("User wins:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
                 break;
 
             //otherwhise user loses
             case "odd":
-                console.log("user loses");
+                console.log("User loses:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
                 break;
         }
 
@@ -71,12 +71,12 @@ evenOddForm.addEventListener("submit", function (e) {
         //and user choice is "odd", user wins"
         switch (userChoice) {
             case "odd":
-                console.log("user wins");
+                console.log("User wins:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
                 break;
 
             //otherwhise user loses
             case "even":
-                console.log("user loses");
+                console.log("User loses:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
                 break;
         };
 
