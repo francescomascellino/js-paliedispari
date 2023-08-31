@@ -5,10 +5,11 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 // const userNum = 5;
 
 //Global variables
-// const confirmSelbtn = document.getElementById("confirmEvenOdd");
 const evenOddForm = document.getElementById("evenOddForm")
 const evenOddChoice = document.getElementById("evenOddChoice");
-const userNumberValue = document.getElementById("userNumberValue")
+const userNumberValue = document.getElementById("userNumberValue");
+const evenOddOutput = document.getElementById("evenOddOutput");
+let outputText;
 
 //Generate random number
 function getRandomNumber(min, max) {
@@ -55,11 +56,15 @@ evenOddForm.addEventListener("submit", function (e) {
         switch (userChoice) {
             case "even":
                 console.log("User wins:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
+                outputText = "Hai vinto"
+                evenOddOutput.innerHTML = outputText
                 break;
 
             //otherwhise user loses
             case "odd":
                 console.log("User loses:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
+                outputText = "Hai perso";
+                evenOddOutput.innerHTML = outputText
                 break;
         }
 
@@ -72,11 +77,15 @@ evenOddForm.addEventListener("submit", function (e) {
         switch (userChoice) {
             case "odd":
                 console.log("User wins:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
+                outputText = "Hai vinto"
+                evenOddOutput.innerHTML = outputText
                 break;
 
             //otherwhise user loses
             case "even":
                 console.log("User loses:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
+                outputText = "Hai perso"
+                evenOddOutput.innerHTML = outputText
                 break;
         };
 
