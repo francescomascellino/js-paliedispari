@@ -120,6 +120,24 @@ function reverse(wordToCheck) {
 
 }
 
+/* WITH ARRAY AND reverse()
+
+function reverse(userImput) {
+
+    let wordToArray = userImput.split("")
+    console.log("word to array =", wordToArray);
+
+    let wordToArrayReverse = wordToArray.reverse()
+    console.log("reverse word to array =", wordToArrayReverse);
+
+    let newWord = wordToArrayReverse.join("")
+    console.log("new word =", newWord);
+
+};
+
+*/
+
+
 function palindromeCheck(word1, reverseWord1) {
 
     if (word1 == reverseWord1) {
@@ -145,24 +163,3 @@ wordCheckBtn.addEventListener("click", function () {
     palindromeCheck(word, reverseResult);
 
 })
-
-
-
-
-
-/* WITH ARRAY AND reverse()
-
-function reverse(userImput) {
-
-    let wordToArray = userImput.split("")
-    console.log("word to array =", wordToArray);
-
-    let wordToArrayReverse = wordToArray.reverse()
-    console.log("reverse word to array =", wordToArrayReverse);
-
-    let newWord = wordToArrayReverse.join("")
-    console.log("new word =", newWord);
-
-};
-
-*/
