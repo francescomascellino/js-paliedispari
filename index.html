@@ -7,12 +7,28 @@
     </head>
     <body>
 
-        <select name="evenOddChoice" id="evenOddChoice">
-            <option value="even">Even</option>
-            <option value="odd">Odd</option>
-        </select>
+        <form id="evenOddForm">
 
-        <button id="confirmEvenOdd">Confirm Selection</button>
+            <label for="userNumberValue">Choose a value between 1 and 5</label>
+            <br>
+            <input type="number" name="userNumberValue" id="userNumberValue"
+                min="1" max="5">
+            <br>
+
+            <label for="evenOddChoice">Guess if the final result will be even or
+                odd:</label>
+            <br>
+            <select name="evenOddChoice" id="evenOddChoice">
+                <option value="even">Even</option>
+                <option value="odd">Odd</option>
+            </select>
+
+            <br>
+            <!-- <button id="confirmEvenOdd">Confirm Selection</button> -->
+
+            <input id="confirmEvenOdd" type="submit" value="Confirm Selection">
+
+        </form>
 
         <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>
