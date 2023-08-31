@@ -5,7 +5,7 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 // const userNum = 5;
 
 //Global variables
-const confirmSelbtn = document.getElementById("confirmEvenOdd");
+// const confirmSelbtn = document.getElementById("confirmEvenOdd");
 const evenOddForm = document.getElementById("evenOddForm")
 const evenOddChoice = document.getElementById("evenOddChoice");
 const userNumberValue = document.getElementById("userNumberValue")
@@ -21,6 +21,7 @@ function getRandomNumber(min, max) {
 function sumEvenOdd(value1, value2) {
 
     if ((value1 + value2) % 2 === 0) {
+        console.log("Value 1=", value1, " - Value 2 =", value2, " - Somma dei valori =", value1 + value2);
         return true
     }
 
@@ -38,24 +39,26 @@ evenOddForm.addEventListener("submit", function (e) {
     console.log("scelta utente =", userChoice);
 
     //Generates a randomnumber from 1 to 5
-    randomNum = getRandomNumber(1, 5);
-    console.log("numero random =", randomNum);
+    const randomNum = getRandomNumber(1, 5);
+    console.log("Numero Random =", randomNum);
 
     //Reads the number choosen by user
-    const userNum = userNumberValue.value
+    const userNum = Number(userNumberValue.value);
     console.log("Numero Utente =", userNum);
 
     //If the sum of the values is even (true)
     if (sumEvenOdd(randomNum, userNum)) {
 
+        console.log("sum even odd =", sumEvenOdd(randomNum, userNum));
+
         //and user choice is "even", user wins"
         switch (userChoice) {
             case "even":
-                console.log("user wins");
+                console.log("User wins", userChoice, sumEvenOdd(randomNum, userNum));
                 break;
 
             //otherwhise user loses
-            default:
+            case "odd":
                 console.log("user loses");
                 break;
         }
@@ -72,7 +75,7 @@ evenOddForm.addEventListener("submit", function (e) {
                 break;
 
             //otherwhise user loses
-            default:
+            case "even":
                 console.log("user loses");
                 break;
         };
