@@ -56,15 +56,15 @@ evenOddForm.addEventListener("submit", function (e) {
         switch (userChoice) {
             case "even":
                 console.log("User wins:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
-                outputText = "Hai vinto"
-                evenOddOutput.innerHTML = outputText
+                outputText = "Hai vinto";
+                evenOddOutput.innerHTML = outputText;
                 break;
 
             //otherwhise user loses
             case "odd":
                 console.log("User loses:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
                 outputText = "Hai perso";
-                evenOddOutput.innerHTML = outputText
+                evenOddOutput.innerHTML = outputText;
                 break;
         }
 
@@ -77,15 +77,15 @@ evenOddForm.addEventListener("submit", function (e) {
         switch (userChoice) {
             case "odd":
                 console.log("User wins:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
-                outputText = "Hai vinto"
-                evenOddOutput.innerHTML = outputText
+                outputText = "Hai vinto";
+                evenOddOutput.innerHTML = outputText;
                 break;
 
             //otherwhise user loses
             case "even":
                 console.log("User loses:", "scelta utente =", userChoice, "sumEvenOdd =", sumEvenOdd(randomNum, userNum));
-                outputText = "Hai perso"
-                evenOddOutput.innerHTML = outputText
+                outputText = "Hai perso";
+                evenOddOutput.innerHTML = outputText;
                 break;
         };
 
@@ -124,14 +124,19 @@ function reverse(wordToCheck) {
 
 function reverse(userImput) {
 
-    let wordToArray = userImput.split("")
+    let wordToArray = userImput.split("");
     console.log("word to array =", wordToArray);
 
-    let wordToArrayReverse = wordToArray.reverse()
+    let wordToArrayReverse = wordToArray.reverse();
     console.log("reverse word to array =", wordToArrayReverse);
 
-    let newWord = wordToArrayReverse.join("")
+    let newWord = wordToArrayReverse.join("");
     console.log("new word =", newWord);
+
+    //let newWord = userImput.split("").reverse().join("");
+    //console.log("new word =", newWord);
+
+    return newWord;
 
 };
 
@@ -143,12 +148,12 @@ function palindromeCheck(word1, reverseWord1) {
     if (word1.toLowerCase() == reverseWord1.toLowerCase()) {
 
         console.log("Il testo inserito è un palindromo");
-        palindromeResult.innerHTML = "Typed text is a palindrome"
+        palindromeResult.innerHTML = "Typed text is a palindrome";
 
     } else {
 
         console.log("Il testo inserito non è un palindromo");
-        palindromeResult.innerHTML = "Typed text is not a palindrome"
+        palindromeResult.innerHTML = "Typed text is not a palindrome";
 
     }
 
